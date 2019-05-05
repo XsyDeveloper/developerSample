@@ -14,7 +14,7 @@ import com.rkhd.platform.sdk.log.LoggerFactory;
 import com.rkhd.platform.sdk.param.ScriptTriggerParam;
 import com.rkhd.platform.sdk.param.ScriptTriggerResult;
 
-public class RkhdHttpClientDemo implements ScriptTrigger{
+public class RkhdHttpClientDemo{
 	private Logger logger = LoggerFactory.getLogger();
 	
 	public void queryDemo() {
@@ -105,12 +105,4 @@ public class RkhdHttpClientDemo implements ScriptTrigger{
 			logger.error(e.getMessage(), e);
 		}
 	}
-
-	@Override
-	public ScriptTriggerResult execute(ScriptTriggerParam arg0) throws ScriptBusinessException {
-		// TODO Auto-generated method stub
-		deleteDemo();
-		return new ScriptTriggerResult(arg0.getDataModelList());
-	}
-
 }
